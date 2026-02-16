@@ -1,22 +1,12 @@
-import React, { Children } from "react";
-
-function Button(props) {
-  const { children = '.....', variant = 'bg-black' } = props;
-  return (
-    <button type="submit" className={`h-10 px-6 font-semibold rounded-lg ${variant} text-white`}>
-      {children}
-    </button>
-  );
-}
+import React from "react";
+// import LoginPage from "./pages/login";
+import RegisterPage from "./pages/register";
 
 const App = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="flex gap-4">
-        <Button variant="bg-red-700 hover:bg-red-600">Login</Button>
-        <Button variant="bg-blue-700">Register</Button>
-        <Button></Button>
-      </div>
+      {/* <LoginPage/> */}
+      <RegisterPage/>
     </div>
   );
 };

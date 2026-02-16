@@ -1,0 +1,12 @@
+import React from "react";
+//import { Children } from "react";
+function Button(props) {
+  const { children = ".....", variant = "bg-black" } = props;
+  return (
+    <button type="submit" className={`h-10 px-6 font-semibold rounded-lg ${variant} text-white`}>
+      {children}
+    </button>
+  );
+}
+
+export default Button;

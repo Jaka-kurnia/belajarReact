@@ -6,7 +6,7 @@ const InputForm = (props) => {
   return (
     <div className="mb-6">
       <Label htmlFor={name}>{label}</Label>
-      <Input type={type} name={name} placeholder={placeholder}/>
+      <Input type={type} name={name} placeholder={placeholder}  />
     </div>
   );
 };

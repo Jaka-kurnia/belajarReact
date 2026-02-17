@@ -1,11 +1,31 @@
-import React from 'react'
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LoginPage from "./pages/login";
+import RegisterPage from "./pages/register";
 
-createRoot(document.getElementById('root')).render(
+const router = createBrowserRouter([
+  // Index Route
+  {
+    path: "/",
+    element: <div>Hello World King</div>,
+  },
+  // Login Route
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  // Register Route
+  {
+    path: "/register",
+    element: <RegisterPage />,
+  },
+]);
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
-)
+);

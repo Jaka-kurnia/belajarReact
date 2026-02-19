@@ -5,6 +5,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/login";
 import RegisterPage from "./pages/register";
+import SignupPage from "./pages/signup";
+
 
 const router = createBrowserRouter([
   // Index Route
@@ -22,6 +24,11 @@ const router = createBrowserRouter([
     path: "/register",
     element: <RegisterPage />,
   },
+  {
+    path: "/signup",
+    element: <SignupPage />,
+  },
+
 ]);
 
 createRoot(document.getElementById("root")).render(
